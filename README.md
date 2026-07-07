@@ -60,6 +60,7 @@ colcon build --symlink-install
 
 ---
 
+```markdown
 ## How to Run
 
 Always remember to source the workspace after building:
@@ -71,26 +72,31 @@ source install/setup.bash
 
 ### 1. Launch Simulation, MoveIt, Vision, and MoveIt Color Picker Nodes
 
-
 ```bash
 ros2 launch panda_bringup pick_and_place.launch.py
 
 ```
 
-Note: You can run each node indivitually in different terminals but this is a compact way
+> **Note:** You can run each node individually in different terminals, but this launch file provides a compact way to spin up the entire pipeline at once.
 
+### 2. Run the MoveIt 2 Pick & Place for a Specific Color
 
-### 2. Run the MoveIt2 Pick & Place for a certain color
+The pick-and-place node combines Cartesian and joint-space moves with smooth joint transitions. It locks the detected color coordinates before initiating the motion profile.
 
-Pick and place node combining Cartesian and joint-space moves with smooth joint transitions.
-Locks the detected color coordinates before starting the motion.
+Execute the node with the `--ros-args -p` flags to target a specific color:
 
-``bash
+```bash
+# Target Red (Default)
+ros2 run pymoveit2 pick_and_place.py
 
-
-ros2 run pymoveit2 pick_and_place.py --ros-args -p target_color:=R
+# Target Green
 ros2 run pymoveit2 pick_and_place.py --ros-args -p target_color:=G
+
+# Target Blue
 ros2 run pymoveit2 pick_and_place.py --ros-args -p target_color:=B
-ros2 run pymoveit2 pick_and_place.py (default is red)
+
+```
+
+```
 
 ```
