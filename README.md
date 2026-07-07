@@ -2,6 +2,8 @@
 
 An autonomous ROS 2 and MoveIt 2 workspace for a Franka Emika Panda robot arm. This project integrates computer vision (`panda_vision`) with motion planning (`panda_moveit` and `pymoveit2`) to detect colored objects and execute a precise pick-and-place pipeline.
 
+![Franka Panda Pick and Place Demo](assets/robot_demo.gif)
+
 ## Repository Structure
 
 * **`panda_bringup`**: Launch files to spin up the entire simulation/hardware pipeline.
