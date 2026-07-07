@@ -82,7 +82,7 @@ Note: You can run each node indivitually in different terminals but this is a co
 
 ### 2. Run the MoveIt2 Pick & Place for a certain color
 
-"""
+``bash
 Pick and place node combining Cartesian and joint-space moves with smooth joint transitions.
 Locks the detected color coordinates before starting the motion.
 
@@ -91,5 +91,4 @@ ros2 run pymoveit2 pick_and_place.py --ros-args -p target_color:=G
 ros2 run pymoveit2 pick_and_place.py --ros-args -p target_color:=B
 
 ros2 run pymoveit2 pick_and_place.py (default is red)
-
-"""
+```
